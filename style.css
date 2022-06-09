@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background: #242424;
+}
+
+.top{
+    position: fixed;
+
+    top: 0;
+    left: auto;
+
+    width: 100%;
+    height: 40px;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.top .circle{ 
+
+    width: 20px;
+    height: 20px;
+
+    border-radius: 100%;
+    margin-left: 9px;
+    margin-top: 12px;
+}
+
+.top .red{
+    background-color: red;
+}
+.top .yellow{
+    background: #FFB100;
+}
+.top .green{
+    background: #06F506;
+}
+
+.top .notch{
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 250px;
+    height: 40px;
+
+    border-radius: 0 0 20px 20px;
+    background: #141313;
+}
+
+.logo{
+    width: 100%;
+
+    margin-top: 127px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo .image{
+    width: 200px;
+    height: 200px;
+
+    border: solid 1px #E8E8E8;
+
+    border-radius: 100%;
+}
+
+.logo .txt{
+    margin-top: 7px;
+
+    font-size: 60px;
+    color: #E8E8E8;
+}
+
+.language{
+    width: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.language .cs{
+    margin: 100px 50px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.language .cs .image{
+    width: 90px;
+    height: 90px;
+}
+.language .cs .bar{    
+    width: 280px;
+    height: 15px;
+
+    border-radius: 10px;
+    margin-top: 2px;
+}
+
+.language .bcs{
+    background: linear-gradient(to right, #ccffcc 0%, #00ff00 100%);
+}
+.language .bjava{
+    background: linear-gradient(to right, #ff0000 0%, #0066ff 100%);
+}
+.language .bsql{
+    background: linear-gradient(to right, #009933 0%, #ff9900 100%);
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+}
+.github{
+    width: 94%;
+    height: 300px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    margin: 100px 0;
+    border-radius: 48px;
+
+    background: #1F1F1F;
+}
+
+.github .left{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.github .image{
+    width: 270px;
+    height: 270px;
+}
+.github .text{
+    font-size: 70px;
+    color: #FFFFFF;
+}
+
+.github .right{
+    margin-left: auto;
+    margin-right: 10px;
+
+    width: 60%;
+    height: 94%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    border-radius: 48px;
+
+    background: #171717;
+}
+
+.github .right .up{
+    width: 100%;
+    height: 90%;
+}
+.github .right .down{
+    width: 100%;
+    height: 10%;
+
+    display: flex;
+    justify-content: center;
+}
+.github .right .down .pages{
+    width: 15px;
+    height: 15px;
+
+    margin: 0 1px;
+    border-radius: 100%;
+
+    background: #3B3B3B;
+}
+.cicon{
+    border: solid 1px #898989;
+}
+.github .right .up{
+    display: flex;
+    flex-direction: column;
+}
+.github .right .up .container{
+    display: flex;
+    flex-direction: row;
+}
+.github .right .up .title-desc{
+    width: 50%;
+
+    color: white;
+    font-size: 20px;
+    margin: 15px 30px;
+}
+.github .right .up .icon{
+    position: relative;
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    margin-top: 40px;
+}
+.github .right .up .icon .ball{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    width: 20px;
+    height: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 100%;
+    background: red;
+}
+.github .right .up .icon .ball h1{
+    position: absolute;
+    font-size: 10px;
+    color: white;
+}
+.github .right .up .icon .repo .ball{
+    top: 50px;
+    right: 10px;
+}
+.github .right .up .icon .stars .ball{
+    top: 123px;
+    right: 10px;
+}
+.github .right .up .icon .image{
+    width: 60px;
+    height: 60px;
+
+    margin-top: 10px;
+}
+.github .right .up .language{
+    display: flex;
+    flex-direction: row;
+
+    align-items: baseline;
+    justify-content: flex-start;
+    margin-left: 20px;
+}
+.github .right .up .language .circle{
+    width: 15px;
+    height: 15px;
+
+    margin-right: 5px;
+
+    border-radius: 100%;
+    background: #1565C0;
+}
+.github .right .up .language .text{
+    font-size: 15px;
+}
