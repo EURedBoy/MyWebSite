@@ -10,6 +10,10 @@ body{
     background: #242424;
 }
 
+.languages {
+    display: flex;
+}
+
 .top{
     position: fixed;
 
@@ -83,7 +87,7 @@ body{
 }
 
 .language{
-    width: 100%;
+    /* width: 100%; */
 
     display: flex;
     flex-wrap: wrap;
