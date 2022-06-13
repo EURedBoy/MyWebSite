@@ -1,6 +1,6 @@
 const repo = document.getElementById("repo");
 const gitArray = [];
-let nRepo;
+let currentRepo = 0;
 
 fetch("https://api.github.com/users/EURedBoy/repos")
     .then(result => result.json())
@@ -19,20 +19,21 @@ fetch("https://api.github.com/users/EURedBoy/repos")
                     r.html_url,
                     r.stargazers_count,
                     0,
-                    languages)
+                    languages,
+                    repos
+                    )
             })
-
-            resultHtml += rHtml;
         }
 
-        repo.innerHTML = resultHtml;
-
-        console.log(resultHtml);
+        repo.innerHTML = gitArray[0];
+        console.log(gitArray[0]);
     })
 
 
-function getRepoHtml(title, description, link, stars, commits, languages) {
+function getRepoHtml(title, description, link, stars, commits, languages, rep) {
     languagesHtml = "";
+    pageHtml = "";
+    let nRepo = 0;
 
     for (let i = 0; i < Object.keys(languages).length; i++) {
         languagesHtml += `
@@ -43,10 +44,9 @@ function getRepoHtml(title, description, link, stars, commits, languages) {
         `
     }
 
-
-    for (let i = 0; i < repos.length; i++) {
+    for (let i = 0; i < rep.length; i++) {
         if (i === nRepo) {
-            pageHtml += `<div class="pages cicon"></div>`
+            pageHtml += `<div class="pages cicon" onclick="avanti()"></div>`
             continue;
         }
         pageHtml += `<div class="pages"></div>`
@@ -81,8 +81,14 @@ function getRepoHtml(title, description, link, stars, commits, languages) {
         </div>
     `
     )
-
     nRepo++;
+}
 
-    
+function avanti(){
+    if (currentRepo === gitArray.length-1) {
+        currentRepo = 0;
+    } else {
+        currentRepo++;
+    }
+    repo.innerHTML = gitArray[currentRepo];
 }
